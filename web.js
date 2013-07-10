@@ -2,8 +2,8 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-var fileBuf = new Buffer(fs.readFileSync("index.html"));
-fileBuf.write(fs.readFileSync("index.html"));
+var fileBuf = new Buffer(fs.readFileSync("index.html","utf-8"));
+fileBuf.write(fs.readFileSync("index.html","utf-8"));
 
 var fileString = fileBuf.toString();
 
