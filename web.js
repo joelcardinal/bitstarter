@@ -6,8 +6,8 @@ var app = express.createServer(express.logger());
 
 var file = fs.readFileSync("index.html");
 
-var buffer = new Buffer(16);
-buffer.write("Hello","utf-8");
+var buffer = new Buffer(file);
+buffer.write(file);
 
 var fileString = buffer.toString("utf-8");
 
